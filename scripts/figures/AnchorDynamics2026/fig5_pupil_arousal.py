@@ -203,6 +203,7 @@ def position_profiles(E, rebuild=False):
                         for t in S['tr']], dtype=float)
         out = {}
         for nm, want in (('a', 1.0), ('n', 0.0)):
+            # not averaging like the manuscript (with session first then across sessions)
             m = ok & (lab == want)
             prof = np.full(NPOS, np.nan)
             if m.sum() > 200:
@@ -402,7 +403,7 @@ def build(mo, dy):
                                'video available -- mount /Volumes/INCR-NolanLab')
         cap = cv2.VideoCapture(vid)
         if not cap.isOpened():
-            raise RuntimeError(f'cannot open {vid} -- is /Volumes/INCR-NolanLab mounted?')
+            raise RuntimeError(_sm_resolve_path(f'cannot open {vid} -- is @SM_VOLUMES_INCR_NOLANLAB_ROOT@ mounted?'))
         t0 = time.time()
         for i in todo:
             cap.set(cv2.CAP_PROP_POS_FRAMES, int(i)); ok, fr = cap.read()
