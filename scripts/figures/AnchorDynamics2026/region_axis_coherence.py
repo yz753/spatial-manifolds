@@ -137,7 +137,7 @@ def session(mo, dy, rng):
             Mi, Mj = byreg[ri], byreg[rj]
             n = min(len(Mi), len(Mj))
             h = n // 2
-            if h < MIN_CELLS // 2:
+            if h < MIN_CELLS // 2: # this implies AT LEAST 8 cells per half are used instead of what's described in the paper (precisely 8 cells per half)
                 continue
             rii, rjj, rij = [], [], []
             for _ in range(N_SPLIT):
