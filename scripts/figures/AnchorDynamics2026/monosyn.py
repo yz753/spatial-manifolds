@@ -129,6 +129,23 @@ def session_ccgs(mouse, day, jitter=False, rng=None):
                 raw[i, j] = _CCH_inner(spikes[i], spikes[j], edges, MAX_LAG_S)
     base = np.stack([[np.convolve(raw[i, j], g, mode='same') for j in range(n)]
                      for i in range(n)]).astype(np.float32)
+    # this convolution does not take account when reaching to the left/right end of CCG,
+    # the code treats the ouside non-existant vals as 0, which decreases calculated baseline/background val
+    # this will affect downstream classification: Reject the pair if any negative-lag bin has a sufficiently significant excess.
+    # an alternative approach:
+    # padding = len(g) // 2
+    # base = np.stack([
+    #     [
+    #         np.convolve(
+    #             np.pad(raw[i, j], padding, mode="reflect"),
+    #             g,
+    #             mode="valid",
+    #         )
+    #         for j in range(n)
+    #     ]
+    #     for i in range(n)
+    # ]).astype(np.float32)
+    
     meta = clusters.metadata.loc[keep] if hasattr(clusters, 'metadata') else None
     return dict(raw=raw, base=base, lags=lags, ids=np.array(keep),
                 n_spikes=np.array([len(s) for s in spikes]), meta=meta)
