@@ -74,7 +74,7 @@ import pynapple as nap
 from paper_units import curate
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUT = f'{ROOT}/data/population_state/of_theta_index.csv'
 RATE_BIN = 0.002        # s, 500 Hz
 SMOOTH_SD = 0.005       # s, Gaussian on the rate

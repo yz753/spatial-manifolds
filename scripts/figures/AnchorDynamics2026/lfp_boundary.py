@@ -27,7 +27,7 @@ import pynapple as nap
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
 LFP = '/Volumes/datasetsSD/Ephys_data/clark2025_lfp'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUTD = f'{ROOT}/data/lfp/boundary'
 FS = 1000.
 BANDS = {'delta': (1, 4), 'theta': (6, 10), 'slow gamma': (30, 50), 'fast gamma': (60, 100), 'high 200-400': (200, 400)}

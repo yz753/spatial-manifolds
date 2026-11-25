@@ -20,7 +20,7 @@ sys.path.insert(0, '/Users/harryclark/Documents/spatial-manifolds/src')
 import pynapple as nap
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 PS = f'{ROOT}/data/population_state'
 OUT = f'{PS}/region_spatial_info.csv'
 DT = .05; N_SHUF = 50; MIN_SHIFT_S = 20.; MIN_SPK = 50

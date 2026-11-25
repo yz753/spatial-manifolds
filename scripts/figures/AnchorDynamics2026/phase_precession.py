@@ -58,7 +58,7 @@ from lfp_batch import FS, LFP_ROOT
 from spatial_manifolds.anchoring import load_session_labels
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SOURCE = '/Users/harryclark/Downloads/clark2025'
+SOURCE = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUT = f'{ROOT}/data/population_state/phase_precession.csv'
 CLS = pd.read_csv(f'{ROOT}/data/cell_classifications_v2.csv')
 

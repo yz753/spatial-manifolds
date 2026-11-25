@@ -66,7 +66,7 @@ clip_trials = _g['clip_trials']
 plt.rcParams['font.family'] = 'Arial'
 FIG = '/Users/harryclark/Documents/spatial-manifolds/scripts/figures/AnchorDynamics2026'
 PS = '/Users/harryclark/Documents/spatial-manifolds/data/population_state'
-SRC = '/Users/harryclark/Downloads/clark2025/'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 MIN_CELLS, MIN_TRIALS = 15, 30
 # Session gating copied from Figure 1 (cell 14 of figure1_schematics.ipynb) so
 # the numbers are directly comparable: a session is included when it has at

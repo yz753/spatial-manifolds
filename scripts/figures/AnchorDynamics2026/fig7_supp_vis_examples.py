@@ -652,7 +652,7 @@ def all_theta_index(mo, dy):
     if _os.path.exists(out):
         return pd.read_csv(out).set_index('cluster_id').theta_index
     import pynapple as _nap
-    src = '/Users/harryclark/Downloads/clark2025'
+    src = '/Volumes/datasetsSD/Ephys_data/clark2025'
     acc = {}
     for ses in ('OF1', 'OF2', 'VR'):
         p = f'{src}/M{mo}/D{dy}/{ses}/sub-M{mo}_ses-D{dy}_typ-{ses}_srt-kilosort4_clusters.npz'
@@ -754,7 +754,7 @@ def draw_probe(ax, mo, dy, rr, vlim, marks=()):
     import probeinterface as pi
     from probeinterface.plotting import plot_probe
     probe = pi.get_probe('imec', 'NP2014')
-    A = pd.read_csv(f'/Users/harryclark/Downloads/clark2025/M{mo}/D{dy}/anatomy_M{mo}_D{dy}.csv')
+    A = pd.read_csv(f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo}/D{dy}/anatomy_M{mo}_D{dy}.csv')
     on = set(zip(A.coord_probe_x.round().astype(int), A.coord_probe_y.round().astype(int)))
     xy = np.round(probe.contact_positions).astype(int)
     act = np.array([(x, y) in on for x, y in xy])

@@ -72,6 +72,15 @@ def session(mouse, day):
     st = STATE[(STATE.mouse == mouse) & (STATE.day == day)]
     if not len(st):
         return None
+    # TRIAL NUMBERING. The NWB's trial_number counts every trial; the state
+    # table counts only those clip_trials keeps (fully inside the ephys
+    # window), renumbered from 1. The two differ by the trials dropped at the
+    # start -- 21 of 245 in M20 D14 -- so the lookup goes through the original
+    # numbers clip_trials returns. (Fixed 2026-11-20; before that the frames of
+    # each trial were given another trial's state.)
+    trials_all = beh['trials'].as_dataframe()
+    _tr, _orig = clip_trials(trials_all, nap.load_file(cp))
+    to_clipped = {int(o): int(n) for o, n in zip(_orig, _tr.number.astype(int))}
     # bool(), not the numpy bool_: `np.True_ is True` is False, which silently
     # left every frame unlabelled.
     anch = {int(k): bool(v) for k, v in zip(st.trial, st.frac_anch > 0.5)}
@@ -105,6 +114,7 @@ def session(mouse, day):
     mu, sd = np.nanmean(r), np.nanstd(r)
     z = (r - mu) / sd if sd > 0 else r * np.nan
 
+    trn = np.array([to_clipped.get(int(n), -1) for n in trn])
     state = np.array([anch.get(int(n), None) for n in trn], dtype=object)
     is_a = np.array([v is True for v in state])
     is_n = np.array([v is False for v in state])

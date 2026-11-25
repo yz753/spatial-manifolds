@@ -56,7 +56,7 @@ LOGS = os.path.join(HERE, 'rebuild_logs')
 # replaces these (or whatever a previous configure set) with the new ones.
 ORIGINAL = {
     'repo': '/Users/harryclark/Documents/spatial-manifolds',
-    'clark2025': '/Users/harryclark/Downloads/clark2025',
+    'clark2025': '/Volumes/datasetsSD/Ephys_data/clark2025',
     'lfp': '/Volumes/datasetsSD/clark2025_lfp',
     'lfp_alt': '/Volumes/INCR-NolanLab/ActiveProjects/Wolf/harry/data/clark2025_lfp',
     'atlas': '/Users/harryclark/.brainglobe/allen_mouse_10um_v1.2',
@@ -141,6 +141,9 @@ DERIVE = [
     ('decoding', 'nb', 'position_decoding_by_anchoring.ipynb', [], False,
      'position decoding by state'),
     ('eye', 'nb', 'figure5_pupil_arousal.ipynb', [], False, 'pupil tables and profiles'),
+    ('pupil_diseng', 'py', 'pupil_disengagement.py', [], False,
+     'the pupil on disengaged epochs: stopped without licking, and blocks with no '
+     'reward earned (supplement to Figure 6; ~4 min, reads the VR files)'),
     ('session_validity', 'nb', 'session_validity_pc1_significance.ipynb', [], False,
      'per-session PC1 significance'),
     # --- everything below reads clark2025_lfp ---
@@ -196,6 +199,8 @@ FIGURES = [
     ('figS_histology', 'py', 'fig_supp_histology_example.py', [], True, 'Figure S15'),
     ('figS16', 'py', 'fig7_supp_more_examples.py', [], False, 'Figure S16'),
     ('figS17', 'py', 'fig6_supp_pupil_examples.py', [], False, 'Figure S17 (eye videos: frames cached per session)'),
+    ('fig_diseng', 'py', 'fig6_supp_disengagement.py', [], False,
+     'the disengagement supplement to Figure 6 (needs pupil_disengagement)'),
     ('figS18', 'py', 'fig5_supp_subnetwork.py', [], False, 'Figure S18 (grid-interneuron subnetwork)'),
     ('figS_ml', 'py', 'fig_supp_attractor_population.py', [], False, 'recruiting non-grid cells to the bump (out of the paper: tried as S15 on 2026-11-02 and dropped)'),
     ('extra', 'py', 'build_extra_pdf.py', [], False, 'compile AnchorDynamics2026_Extra_analyses.pdf'),

@@ -33,9 +33,13 @@ tell Harry if anything has moved.
 | the DeepLabCut eye crop windows | `/Volumes/INCR-NolanLab/ActiveProjects/Chris/Cohort12/derivatives/labels/deeplabcut/all_eye_crops.csv` | small | same |
 | **Allen mouse atlas, 10 µm** — public, not on the share | `pip install brainglobe-atlasapi` then `brainglobe install -a allen_mouse_10um`, which lands in `~/.brainglobe/allen_mouse_10um_v1.2` | ~5 GB | Figure 4 and Figures S7, S8 (`fig3_anatomy.py`) |
 
-Harry keeps a local copy of clark2025 (faster than reading over the network)
-and the LFP on an SD card at `/Volumes/datasetsSD/Ephys_data/clark2025_lfp`;
-either works, and step 3 is where you say which.
+Harry's local copies of both datasets are on one SD card, at
+`/Volumes/datasetsSD/Ephys_data/clark2025` and
+`/Volumes/datasetsSD/Ephys_data/clark2025_lfp` (moved there 2026-11-18, which
+is also where the brainglobe atlas tiffs are symlinked). That is faster than
+reading over the network, but it means **the card has to be mounted for any
+step that opens a session**, not just the LFP and anatomy ones. Reading the
+DataStore paths directly works too; step 3 is where you say which.
 
 **The processed data is enough.** The raw Neuropixels recordings, and the
 preprocessing that turns them into clark2025, are a separate pipeline —

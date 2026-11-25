@@ -58,7 +58,7 @@ sys.path.insert(0, '/Users/harryclark/Documents/spatial-manifolds/src')
 import pynapple as nap                                                   # noqa: E402
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUT = f'{ROOT}/data/of_xgb'
 os.makedirs(OUT, exist_ok=True)
 DT = .02

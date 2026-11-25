@@ -237,7 +237,7 @@ if not os.path.exists(OF_CACHE):
     from spatial_manifolds.detect_grids import (_fill_nans_from_neighbors,
                                                 compute_travel_projected,
                                                 gaussian_filter_nan)
-    stem = (f'/Users/harryclark/Downloads/clark2025/M{mo_}/D{dy_}/OF1/'
+    stem = (f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo_}/D{dy_}/OF1/'
             f'sub-M{mo_}_ses-D{dy_}_typ-OF1')
     beh = nap.load_file(f'{stem}_beh.nwb')
     clu = nap.load_file(f'{stem}_srt-kilosort4_clusters.npz')

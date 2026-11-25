@@ -51,7 +51,7 @@ sys.path.insert(0, '/Users/harryclark/Documents/spatial-manifolds/src')
 import pynapple as nap
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SOURCE = '/Users/harryclark/Downloads/clark2025'
+SOURCE = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUT = f'{ROOT}/data/population_state/speed_interneurons.csv'
 
 BIN_S = 0.250

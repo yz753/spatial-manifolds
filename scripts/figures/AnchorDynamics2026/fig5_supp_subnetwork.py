@@ -214,7 +214,7 @@ def main():
     from matplotlib.collections import PatchCollection
     from matplotlib.patches import Rectangle
     probe = pi.get_probe('imec', 'NP2014')
-    A_ = pd.read_csv(f'/Users/harryclark/Downloads/clark2025/M{mo}/D{dy}/anatomy_M{mo}_D{dy}.csv')
+    A_ = pd.read_csv(f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo}/D{dy}/anatomy_M{mo}_D{dy}.csv')
     on = set(zip(A_.coord_probe_x.round().astype(int), A_.coord_probe_y.round().astype(int)))
     xy = np.round(probe.contact_positions).astype(int)
     act = np.array([(x_, y_) in on for x_, y_ in xy])

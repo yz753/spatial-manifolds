@@ -40,7 +40,7 @@ import matplotlib as mpl
 #   {SOURCE}/M{mouse}/D{day}/{session}/sub-M{mouse}_ses-D{day}_typ-{session}_srt-kilosort4_clusters.npz
 # The old tree used sub-M{mouse}_ses-D{day}_typ-{session}_*. Per-cluster anatomy
 # now lives outside the dataset tree, hence its own constant.
-DEFAULT_SOURCE_PATH = '/Users/harryclark/Downloads/clark2025/'
+DEFAULT_SOURCE_PATH = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 BRAIN_LOCATIONS_CSV = '/Users/harryclark/Downloads/all_cluster_brain_locations_chris.csv'
 
 mpl.rcParams['font.family'] = 'Arial'

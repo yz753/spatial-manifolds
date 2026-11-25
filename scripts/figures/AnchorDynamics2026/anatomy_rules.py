@@ -93,7 +93,7 @@ def vr_rates(mo, dy):
     """VR firing rate (Hz) of every cluster, from the cluster file's metadata."""
     if (mo, dy) not in _RATE:
         import pynapple as nap
-        p = f'/Users/harryclark/Downloads/clark2025/M{mo}/D{dy}/VR/sub-M{mo}_ses-D{dy}_typ-VR_srt-kilosort4_clusters.npz'
+        p = f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo}/D{dy}/VR/sub-M{mo}_ses-D{dy}_typ-VR_srt-kilosort4_clusters.npz'
         m = nap.load_file(p).metadata
         _RATE[(mo, dy)] = dict(zip(m.index.astype(int), m.firing_rate.astype(float)))
     return _RATE[(mo, dy)]

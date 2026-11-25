@@ -49,7 +49,7 @@ from scipy.stats import norm as sp_norm, poisson as sp_poisson
 from spatial_manifolds.cross_correlograms import _CCH_inner
 from paper_units import curate
 
-SRC = '/Users/harryclark/Downloads/clark2025/'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 OUT = '/Users/harryclark/Documents/spatial-manifolds/data/monosyn'
 os.makedirs(OUT, exist_ok=True)
 

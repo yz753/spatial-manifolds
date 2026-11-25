@@ -75,7 +75,7 @@ from spatial_manifolds.anchoring import load_session_labels
 from paper_units import curate
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 PS = f'{ROOT}/data/population_state'
 OUT = f'{PS}/unit_table.csv'
 WAVE = ['peak_to_trough_duration', 'trough_half_width', 'peak_half_width',

@@ -27,7 +27,10 @@ recordings, and what to do when something goes wrong.
 
 Disk: the repository is a few GB because it carries the intermediate results.
 Copying clark2025 locally is faster than reading it over the network, but
-either works.
+either works. On Harry's machine both datasets and the atlas now live on one
+SD card under `/Volumes/datasetsSD/` (clark2025 moved there 2026-11-18, off a
+nearly full boot volume), so every step that opens a session needs the card
+mounted.
 
 ### Things that are *not* in clark2025, and are in the repository instead
 
@@ -227,6 +230,7 @@ them there.
 | Extra E2–E4 | `fig3_supp_laminar.py`, `fig6_region_examples.py`, `fig6_supp_region_examples.py` |
 | Extra analyses PDF | `build_extra_pdf.py` (text from `EXTRA.md`, captions inside the script) |
 | not in the paper | `fig8_supp_can_model.py` (the gated attractor as a ring and a 2-D sheet; removed 2026-10-31, still built by `figures`) |
+| not yet numbered: the disengagement supplement to Figure 6 (2026-11-20) | `pupil_disengagement.py` (~4 min, reads the VR files; writes `data/eye_anchoring/pupil_disengagement{.csv,_profiles.npz}`), then `fig6_supp_disengagement.py` → `fig6_supp_disengagement.pdf`. Built by `figures` but **not inserted into `build_cell_pdf.py`**, because inserting it renumbers S18 and S19 |
 | not in the paper: reviewer questions answered off-figure (2026-11-17) | `pupil_stationary.py` (the pupil measure on stationary and black-box epochs, position-matched; writes `data/eye_anchoring/pupil_stationary.csv`, ~20 s) and `pupil_decode_state.py` (can the state be read from pupil alone: single-trial AUC, state recovery, change detection, each against 500 phase-randomised surrogates; writes `data/eye_anchoring/pupil_decode_state.csv`, ~20 min). Both import the paper's pupil measure by exec'ing two cells of `figure5_pupil_arousal.ipynb`, so they cannot drift from it |
 | not in the paper | the mediolateral question is answered from `data/lfp/lfp_power_by_anchoring.csv`, which already carries `ml`, `ml_side`, `layer` and `dv` per channel group (`lfp_batch.py`, `mec_groups()`, split at `ML_BOUND = 3400` µm) -- no extra script |
 | paper PDF | `build_cell_pdf.py` (text from `MANUSCRIPT.md` and `PAPER.md`, captions inside the script) |

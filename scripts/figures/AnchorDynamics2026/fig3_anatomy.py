@@ -415,7 +415,7 @@ from spatial_manifolds.detect_grids import (_fill_nans_from_neighbors,
                                             compute_travel_projected,
                                             gaussian_filter_nan)
 
-SRC = '/Users/harryclark/Downloads/clark2025/'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 RM_SESSIONS = [(24, 3000), (19, 3270), (22, 3540), (23, 3720)]
 RM_N, RM_COLS = 27, 3          # 27 cells per session, 9 rows of 3
 _cls = pd.read_csv(f'{ROOT}/data/cell_classifications.csv')

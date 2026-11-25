@@ -28,7 +28,7 @@ sys.path.insert(0, '/Users/harryclark/Documents/spatial-manifolds/src')
 import pynapple as nap
 
 LFP = '/Volumes/datasetsSD/Ephys_data/clark2025_lfp'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUTD = '/Users/harryclark/Documents/spatial-manifolds/data/lfp/boundary'
 FS = 1000.
 WFEAT = [('amplitude', lambda m: np.log10(m.amplitude_median.abs())),

@@ -53,7 +53,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pynapple as nap                                                   # noqa: E402
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 LFP = '/Volumes/datasetsSD/Ephys_data/clark2025_lfp'
 OUT = f'{ROOT}/data/glm_ln'
 os.makedirs(OUT, exist_ok=True)

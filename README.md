@@ -42,8 +42,11 @@ has moved.
 | the DeepLabCut eye crop windows | `/Volumes/INCR-NolanLab/ActiveProjects/Chris/Cohort12/derivatives/labels/deeplabcut/all_eye_crops.csv` | same |
 | **Allen mouse atlas, 10 µm** — public, not on the share | `pip install brainglobe-atlasapi` then `brainglobe install -a allen_mouse_10um`, which lands in `~/.brainglobe/allen_mouse_10um_v1.2` (~5 GB) | Figure 4 and Figures S7, S8 |
 
-A local copy of clark2025 is faster than reading it over the network, but
-either works; `rebuild_paper.py configure` is where you say which path to use.
+A local copy is faster than reading over the network, but either works;
+`rebuild_paper.py configure` is where you say which path to use. Harry's local
+copies of clark2025 and clark2025_lfp are both on one SD card, under
+`/Volumes/datasetsSD/Ephys_data/`, along with the atlas tiffs — so on that
+machine the card must be mounted for any step that opens a session.
 The raw Neuropixels recordings, and the preprocessing that turns them into
 clark2025, are a separate pipeline — see [`data/README.md`](data/README.md).
 

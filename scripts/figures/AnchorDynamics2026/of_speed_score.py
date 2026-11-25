@@ -43,7 +43,7 @@ import pynapple as nap
 from paper_units import curate
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-SRC = '/Users/harryclark/Downloads/clark2025'
+SRC = '/Volumes/datasetsSD/Ephys_data/clark2025'
 OUT = f'{ROOT}/data/population_state/of_speed_score.csv'
 BIN = 0.2              # s
 SMOOTH = 2             # bins, boxcar on both rate and speed

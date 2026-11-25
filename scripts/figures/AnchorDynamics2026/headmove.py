@@ -102,7 +102,7 @@ if __name__ == '__main__':
     print(f'{hdr[0]:9s} {hdr[1]:>6s} {hdr[2]:>7s} {hdr[3]:>6s} {hdr[4]:>6s}'
           f' {hdr[5]:>7s} {hdr[6]:>10s}')
     for mo, dy in ((20,14),(21,20),(22,35),(25,16),(26,18),(27,17),(28,16),(29,23),(20,23)):
-        beh = nap.load_file(f'/Users/harryclark/Downloads/clark2025/M{mo}/D{dy}/VR/'
+        beh = nap.load_file(f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo}/D{dy}/VR/'
                             f'sub-M{mo}_ses-D{dy}_typ-VR_beh.nwb')
         X = np.array([np.asarray(beh[f'eye_{k}_x'].values, float) for k in LM])
         Y = np.array([np.asarray(beh[f'eye_{k}_y'].values, float) for k in LM])

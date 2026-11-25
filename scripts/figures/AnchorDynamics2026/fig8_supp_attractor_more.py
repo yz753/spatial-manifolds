@@ -106,7 +106,7 @@ def of_maps(mo, dy, cells):
         from spatial_manifolds.detect_grids import (_fill_nans_from_neighbors,
                                                     compute_travel_projected,
                                                     gaussian_filter_nan)
-        stem = f'/Users/harryclark/Downloads/clark2025/M{mo}/D{dy}/OF1/sub-M{mo}_ses-D{dy}_typ-OF1'
+        stem = f'/Volumes/datasetsSD/Ephys_data/clark2025/M{mo}/D{dy}/OF1/sub-M{mo}_ses-D{dy}_typ-OF1'
         beh = nap.load_file(f'{stem}_beh.nwb')
         clu = nap.load_file(f'{stem}_srt-kilosort4_clusters.npz')
         cls = pd.read_csv(f'{ROOT}/data/cell_classifications.csv')

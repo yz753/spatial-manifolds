@@ -19,7 +19,7 @@ import re
 import pandas as pd
 
 ROOT = '/Users/harryclark/Documents/spatial-manifolds'
-CLARK2025 = '/Users/harryclark/Downloads/clark2025/'
+CLARK2025 = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 OUT = f'{ROOT}/data/device_contact_id_annotations.csv'
 
 if __name__ == '__main__':

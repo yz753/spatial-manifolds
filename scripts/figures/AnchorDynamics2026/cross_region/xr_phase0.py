@@ -33,7 +33,7 @@ sys.path.insert(0, '/Users/harryclark/Documents/spatial-manifolds/src')
 import pynapple as nap
 from spatial_manifolds.mlencoding import MLencoding, poisson_pseudoR2
 
-SOURCE_PATH = '/Users/harryclark/Downloads/clark2025/'
+SOURCE_PATH = '/Volumes/datasetsSD/Ephys_data/clark2025/'
 TIME_BS, HISTORY_MS, TL = 10, 1000, 200.0
 N_FILTERS = 5                  # raised-cosine basis, NOT one filter per bin
 N_POOL, MIN_SPIKES = 10, 500
